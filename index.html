@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js'></script>
+    <title>Webpage -> Arduino</title>
+
+    <style>
+        #potential {
+            width: 500px;
+            height: 500px;
+            background-color: #f00;
+        }
+    </style>
+</head>
+<body>
+    <h1>Commmunication between Arduino and a Webpage</h1>
+    <div id="potential"></div>
+    <script>
+        var socket = io();
+
+        socket.on('data', function(data){
+            console.log(data);
+            document.getElementById('potential').innerHTML = data;
+            document.getElementById('potential').style.opacity = data/100;
+        });
+    </script>
+</body>
+</html>
