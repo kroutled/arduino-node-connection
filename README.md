@@ -14,6 +14,7 @@ Steps to run:
 1. Clone the repository.
 2. Navigate to folder.
 3. Run npm install (NOTE: you will need to have node and npm installed).
-4. Run node app.js *path to the arduino eg. COM4 - Windows / /dev/cu.something - macOS*.
-5. Open a browser and navigate to localhost:3000.
-6. Adjust the potentiometer to view the changes in opacity of the block on the webpage.
+4. Upload .ino file to Arduino using Arduino App.
+5. Run node app.js *path to the arduino eg. COM4 - Windows / /dev/cu.something - macOS*.
+6. Open a browser and navigate to localhost:3000.
+7. Adjust the potentiometer to view the changes in opacity of the block on the webpage.
